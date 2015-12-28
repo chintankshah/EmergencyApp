@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="EmergencyWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-pq-1mt">
+                                <rect key="frame" x="16" y="5" width="80" height="40"/>
+                                <color key="backgroundColor" red="0.92473440033908294" green="0.14509803921568606" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FeP-Tp-0f3"/>
+                                    <constraint firstAttribute="width" constant="80" id="ctF-fT-zXi"/>
+                                </constraints>
+                                <state key="normal" title="Panic">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="panicAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="igX-9F-wVH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2q-Mz-XnK">
+                                <rect key="frame" x="224" y="5" width="80" height="40"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.82745098039999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Yw0-Hh-iqV"/>
+                                    <constraint firstAttribute="width" constant="80" id="wgz-cy-3HH"/>
+                                </constraints>
+                                <state key="normal" title="Alert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="alertAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="HUa-cg-E04"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfm-OC-t3x">
+                                <rect key="frame" x="112" y="5" width="80" height="40"/>
+                                <color key="backgroundColor" red="0.78976266493439473" green="0.18728772759103643" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="few-R1-f8g"/>
+                                    <constraint firstAttribute="height" constant="40" id="sqW-p9-AAF"/>
+                                </constraints>
+                                <state key="normal" title="Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="rm7-It-iMH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wqP-pq-1mt" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="8JS-qI-Y1b"/>
+                            <constraint firstItem="Yfm-OC-t3x" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" constant="-8" id="KZa-VP-cc9"/>
+                            <constraint firstItem="W2q-Mz-XnK" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="MbI-Yz-71t"/>
+                            <constraint firstItem="wqP-pq-1mt" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="WDH-mX-3cU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W2q-Mz-XnK" secondAttribute="trailing" id="cid-sU-CVb"/>
+                            <constraint firstItem="Yfm-OC-t3x" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="pgt-W8-AGL"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="50"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473" y="213"/>
+        </scene>
+    </scenes>
+</document>
